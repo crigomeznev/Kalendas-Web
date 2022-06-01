@@ -1,0 +1,136 @@
+$browntransp = rgba(138, 77, 28, 0.5);
+$greytransp = rgba(88, 88, 88, 0.5);
+$darktransp = rgba(0, 0, 0, 0.5);
+$grey = rgb(250, 140, 140);
+$primary-color=rgb(255, 209, 92);
+$focus-color=rgb(30, 255, 0);
+$primary-bg=saddlebrown
+
+
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    box-sizing: border-box
+
+    z-index: 1;
+    margin: 0px;
+    height: 100vh
+    min-height: 100%;
+    width: 100vw;
+
+    @font-face {
+        font-family: weiss;
+        src: url(./fonts/WeissLapidar.ttf);
+    }
+
+    .title-font {
+        font-family: weiss, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 4em
+        font-weight: bold
+    }
+
+    background-color:blanchedAlmond;
+
+    header{
+        height: 10vh;
+    }
+
+    main{
+        height: 85vh;
+    }
+
+    footer{
+        height: 5vh;
+    }
+
+    .bg-img{
+        position:relative;
+        margin:0px;
+
+        > img{
+            position:absolute;
+            top:0px;
+            left:0px;
+            width:100%;
+            height:100%;
+            z-index: -10;
+            object-fit:cover;
+        }
+    }
+
+    .bg-overlay{
+        position:relative;
+
+        &::after{
+            z-index: -1;
+            position:absolute;
+            top:0px;
+            left:0px;
+            content:"";
+            display:block;
+            width:100%;
+            height: 100%;
+            background-color: $browntransp
+        }
+    }
+
+    .bg-transp{
+        background-color: rgba(139, 77, 19, 0.7);
+    }
+
+    .bg-dark-transp{
+        background-color: $darktransp
+    }
+
+    .full-screen{
+        width: 100vw
+        height: 100vh
+        margin:0px
+        padding:0px
+    }
+
+    .center-content{
+        max-width: 1200px
+        margin: 0px auto
+    }
+
+    .btn-rounded{
+        border-radius: 50%;
+    }
+
+    .btn-sm{
+        width:10px;
+        height: 10px;
+    }
+
+    .form-container{
+        overflow: auto;
+    }
+
+
+
+    // Override
+    .calendar-wrapper{
+        background-color: rgba(255, 255, 255, 0.7)
+    }
+
+
+
+
+    // reset
+    input[type="text"], textarea {
+        background-color : #d1d1d1; 
+    }
+
+    a[href]{
+        text-decoration: none
+    }
+
+    li{
+        list-style-type: none
+    }
+
+}
