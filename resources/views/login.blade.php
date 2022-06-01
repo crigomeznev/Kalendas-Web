@@ -59,7 +59,7 @@
                     </div>
 
                     <div>
-                        <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign
+                        <p class="mb-0">Don't have an account? <a href="{{route('register.create')}}" class="text-white-50 fw-bold">Sign
                                 Up</a>
                         </p>
                     </div>
