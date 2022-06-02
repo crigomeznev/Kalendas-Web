@@ -95,6 +95,8 @@ Route::get('/googleservice', function(){
 
 Route::get('/google', [GoogleCalendarController::class, 'getToken']);
 
+Route::post('/publish', [GoogleCalendarController::class, 'publish']);
+
 
  
 Route::get('/auth/redirect', [GoogleCalendarController::class, 'redirect']);

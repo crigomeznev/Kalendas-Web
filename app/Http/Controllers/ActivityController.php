@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\MessageBag;
 
+
+use Spatie\GoogleCalendar\Event;
+use Carbon\Carbon;
+
 class ActivityController extends Controller
 {
     /**
@@ -176,13 +180,21 @@ class ActivityController extends Controller
 
 
 
-    public function publish(Request $request, Activity $activity)
+    public function publish(Request $request, Activity $activity)    
     {
-        if (Auth::user()->cannot('owner', $activity)) {
-            return redirect()->back()->withErrors(['error' => 'You are not authorized to do this action']);
-        }
 
+        echo "publishing";
+        $event = new Event;
         
-    }
+        echo "uploading activity to google calendar event";
+        
+        $event->name = $activity->title;
+        $event->startDate = Carbon::now();
+        $event->endDate = Carbon::now()->addHour();
+        $event->save();
 
+        echo "event saved";
+
+        var_dump($event);
+    }
 }
