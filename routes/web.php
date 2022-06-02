@@ -97,12 +97,5 @@ Route::get('/google', [GoogleCalendarController::class, 'getToken']);
 
 
  
-Route::get('/auth/redirect', function () {
-    return Socialite::driver('google')->redirect();
-});
- 
-Route::get('/auth/callback', function () {
-    $user = Socialite::driver('google')->user();
- 
-    // $user->token
-});
+Route::get('/auth/redirect', [GoogleCalendarController::class, 'redirect']);
+Route::get('/auth/callback', [GoogleCalendarController::class, 'callback']);
