@@ -8,8 +8,10 @@ use App\Http\Controllers\GoogleAPIController;
 use App\Http\Controllers\HelperController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\TargetController;
+use App\Http\Controllers\GoogleCalendarController;
 use Illuminate\Support\Facades\Route;
 
+use Laravel\Socialite\Facades\Socialite;
 
 
 use Spatie\GoogleCalendar\Event;
@@ -92,3 +94,15 @@ Route::get('/googleservice', function(){
 
 
 Route::get('/google', [GoogleCalendarController::class, 'getToken']);
+
+
+ 
+Route::get('/auth/redirect', function () {
+    return Socialite::driver('google')->redirect();
+});
+ 
+Route::get('/auth/callback', function () {
+    $user = Socialite::driver('google')->user();
+ 
+    // $user->token
+});
