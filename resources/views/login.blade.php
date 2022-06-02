@@ -11,6 +11,8 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
+
+    <script src="{{ asset('js/utils.js') }}"></script>
 </head>
 
 <body>
@@ -70,27 +72,6 @@
             </form>
         </div>
 
-        {{-- <section class="vh-100 gradient-custom">
-            <div class="container py-5 h-100">
-              <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                </div>
-              </div>
-            </div>
-          </section>
-          
-        <div class="col-md d-flex flex-column justify-content-center">
-                <input type="email" name="email" id="email" value="{{ old('email') }}" class="form-control m-4"
-                    placeholder="Type your email">
-
-                <input type="password" name="password" id="password" class="col form-control"
-                    placeholder="Type your password">
-
-                    <input type="submit" value="Log in" class="btn btn-success">
-
-                <a href="{{ route('register.create') }}" class="btn btn-success">Register</a>
-            </form> --}}
-        {{-- </div> --}}
     </section>
 
 

@@ -3,6 +3,7 @@
 @section('title', 'Register')
 
 @section('header')
+<script src="{{ asset('js/utils.js') }}"></script>
 @endsection
 
 @section('content')
