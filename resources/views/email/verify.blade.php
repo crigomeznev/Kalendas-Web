@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Kalendas - Verify email</title>
 </head>
 <body>
-    <h1>This is my email!!!! HELOUUUUUUU BABYYYYYS</h1>
+    <h2>Kalendas - Verify email</h2>
+    <p>You successfully registered in Kalendas! There's only one step left, you need to verify your email address</p>
     <a href="{{$url}}">Click here to validate your account</a>
+
+    <img src="{{asset('./img/logo.png')}}">
 </body>
 </html>

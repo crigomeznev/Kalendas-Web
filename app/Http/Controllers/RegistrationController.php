@@ -39,7 +39,7 @@ class RegistrationController extends Controller
         
         $fields = request(['name', 'lastname', 'email', 'password', 'birthdate', 'gender']);
         $fields['country_id'] = Country::firstWhere('code', $request->input('country'))->id;
-        $fields['blocked'] = true; // unblocked when user verifies email
+        $fields['blocked'] = 1; // unblocked when user verifies email
         $fields['password'] = bcrypt($fields['password']);
         $user = User::create($fields);
     
