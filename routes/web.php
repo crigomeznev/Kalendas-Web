@@ -91,4 +91,4 @@ Route::get('/googleservice', function(){
 });
 
 
-Route::get('/google', [GoogleCalendarController::class, 'getToken');
+Route::get('/google', [GoogleCalendarController::class, 'getToken']);
