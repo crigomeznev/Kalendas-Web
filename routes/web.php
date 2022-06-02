@@ -95,14 +95,22 @@ Route::get('/googleservice', function(){
 
 Route::get('/google', [GoogleCalendarController::class, 'getToken']);
 
+Route::post('/publish', [GoogleCalendarController::class, 'publish']);
 
- 
-Route::get('/auth/redirect', function () {
-    return Socialite::driver('google')->redirect();
-});
- 
+
 Route::get('/auth/callback', function () {
-    $user = Socialite::driver('google')->user();
- 
-    // $user->token
+    // $googleUser = Socialite::driver('google')->user();
+    $googleUser = Socialite::driver('google')->stateless()->user();
+
+    var_dump($googleUser);
+
+    $events = Event::get();
+
+    var_dump($events);
+});
+
+Route::get('/redirect', function(){
+// return Socialite::driver('google') ->setScopes(['openid', 'email'])
+    return Socialite::driver('google') ->setScopes(['openid', 'https://www.googleapis.com/auth/calendar', 'https://www.googleapis.com/auth/calendar.events'])
+    ->redirect();
 });

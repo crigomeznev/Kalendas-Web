@@ -14,7 +14,7 @@ $(document).ready(function () {
         // AJAX
         // let token = $('input[name="_token"]').val();
         $.ajax({
-            url: 'https://www.kalendas.home/calendars/switch',
+            url: 'https://www.kalendas.com/calendars/switch',
             headers: {
                 'X-Requested-With': 'XMLHttpRequest'
             },
@@ -25,7 +25,7 @@ $(document).ready(function () {
             type: 'POST',
             success: function (response) {
                 // recarreguem la pàgina
-                window.location.replace("https://www.kalendas.home/calendars");
+                window.location.replace("https://www.kalendas.com/calendars");
             },
             statusCode: {
                 404: function (response) {
@@ -66,7 +66,7 @@ $(document).ready(function () {
         if (date!==null)
             dateObj = new Date(date).toLocaleDateString("en-CA", { year: "numeric", month: "2-digit", day: "2-digit" });
         $.ajax({
-            url: 'https://www.kalendas.home/calendars/date',
+            url: 'https://www.kalendas.com/calendars/date',
             headers: {
                 'X-Requested-With': 'XMLHttpRequest'
             },
@@ -77,7 +77,7 @@ $(document).ready(function () {
             type: 'POST',
             success: function (response) {
                 // recarreguem la pàgina
-                window.location.replace("https://www.kalendas.home/calendars");
+                window.location.replace("https://www.kalendas.com/calendars");
             },
             statusCode: {
                 404: function (response) {

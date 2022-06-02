@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use Google\Google_Client;
 
+use Socialite;
+
 
 class GoogleCalendarController extends Controller
 {
@@ -94,4 +96,9 @@ class GoogleCalendarController extends Controller
             }
         }
     }
+
+
+
+
+
 }
