@@ -3,7 +3,7 @@
 @section('title', 'Register')
 
 @section('header')
-<script src="{{ asset('js/utils.js') }}"></script>
+<script src="{{ asset('js/passwordUtils.js') }}"></script>
 @endsection
 
 @section('content')
@@ -30,13 +30,15 @@
                     {{!is_null($email)? "readonly" : ""}}>
             </div>
             <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" class="form-control" id="password" name="password" value="{{ old('password') }}">
-            </div>
-            <div class="form-group">
-                <label for="repassword">Password again:</label>
-                <input type="password" class="form-control" id="repassword" name="repassword"
-                    value="{{ old('repassword') }}">
+                <label class="form-label" for="password">Password:</label>
+                <strong id="passwordWarning" style="color:red; visibility:hidden;">Careful! Caps Lock is enabled!</strong>
+                <div class="d-flex align-items-center">
+                    <input type="password" class="form-control" id="password" name="password" value="{{ old('password') }}">
+                    <label for="togglePassword" class="col-1">
+                        <input type="checkbox" id="togglePassword" class="form-check-input">
+                        Show
+                    </label>
+                </div>
             </div>
             <div class="form-group">
                 <label for="birthdate">Birthdate:</label>

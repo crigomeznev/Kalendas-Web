@@ -12,7 +12,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
 
-    <script src="{{ asset('js/utils.js') }}"></script>
+    <script src="{{ asset('js/formUtils.js') }}"></script>
+    <script src="{{ asset('js/passwordUtils.js') }}"></script>
 </head>
 
 <body>
@@ -52,7 +53,14 @@
                         </div>
 
                         <div class="form-outline form-white mb-4">
-                            <input type="password" name="password" id="typePasswordX" class="form-control form-control-lg" />
+                            <strong id="passwordWarning" style="color:red; visibility:hidden;">Careful! Caps Lock is enabled!</strong>
+                            <div class="d-flex align-items-center">
+                                <input type="password" name="password" id="typePasswordX" class="form-control form-control-lg col" />
+                                <label for="togglePassword" class="col-1">
+                                    <input type="checkbox" id="togglePassword" class="form-check-input">
+                                    Show
+                                </label>
+                            </div>
                             <label class="form-label" for="typePasswordX">Password</label>
                         </div>
 

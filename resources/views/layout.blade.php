@@ -16,6 +16,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
     
+    <script src="{{ asset('js/formUtils.js') }}"></script>
+    
     @section('head')
     @show
 </head>
