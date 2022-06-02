@@ -10,7 +10,14 @@
     @if ($errors->any())
         {!! implode('', $errors->all('<div>:message</div>')) !!}
     @endif
-
+    @if (Session::has('success'))
+        <div class="alert alert-success">
+            <ul>
+                <li>{!! Session::get('success') !!}</li>
+            </ul>
+        </div>
+    @endif
+    
     <section class="row">
         <h2 class="text-center">Global settings</h2>
 
@@ -67,6 +74,10 @@
                 </table>
         </div>
 
+        <fieldset>
+            <legend>Google Calendar</legend>
+            <a href="{{route('google.redirect')}}" class="btn btn-info bg-gradient">Connect your kalendas account with Google Calendar!</a>
+        </fieldset>
     </section>
 
 @endsection

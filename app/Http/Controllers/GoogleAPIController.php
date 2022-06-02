@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Google_Client;
+use \Google\Google_Client;
 use \Google\Service;
 use Illuminate\Http\Request;
 

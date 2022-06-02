@@ -27,7 +27,12 @@ class User extends Authenticatable
         'birthdate',
         'gender',
         'country_id',
-        'blocked'
+        'blocked',
+        'google_token'
+    ];
+
+    protected $casts = [
+        'google_token' => 'array'
     ];
 
     /**
@@ -57,10 +62,5 @@ class User extends Authenticatable
     public function __toString()
     {
         return $this->name.' '.$this->lastname;
-    }
-
-    public function googleAccounts()
-    {
-        return $this->hasMany(GoogleAccount::class);
     }
 }

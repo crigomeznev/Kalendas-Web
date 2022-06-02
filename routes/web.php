@@ -66,8 +66,6 @@ Route::resource('helpers', HelperController::class);
 Route::resource('activities', ActivityController::class);
 Route::resource('targets', TargetController::class);
 
-Route::post('activities/{activity}/publish', [ActivityController::class, 'publish'])
-    ->name('activities.publish');
 Route::post('targets/upload', [TargetController::class, 'upload'])
     ->name('targets.upload');
 
@@ -93,11 +91,10 @@ Route::get('/googleservice', function(){
 });
 
 
-Route::get('/google', [GoogleCalendarController::class, 'getToken']);
 
-Route::post('/publish', [GoogleCalendarController::class, 'publish']);
-
-
+Route::post('activities/{activity}/publish', [GoogleCalendarController::class, 'publish'])
+    ->name('google.publish');
  
-Route::get('/auth/redirect', [GoogleCalendarController::class, 'redirect']);
+Route::get('/auth/redirect', [GoogleCalendarController::class, 'redirect'])
+    ->name('google.redirect');
 Route::get('/auth/callback', [GoogleCalendarController::class, 'callback']);

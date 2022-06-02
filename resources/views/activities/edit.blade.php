@@ -26,6 +26,14 @@
     @if ($errors->any())
         {!! implode('', $errors->all('<div>:message</div>')) !!}
     @endif
+
+    @if (Session::has('success'))
+        <div class="alert alert-success">
+            <ul>
+                <li>{!! Session::get('success') !!}</li>
+            </ul>
+        </div>
+    @endif    
     <form action="{{ route('activities.update', $activity->id) }}" method="post" class="bg-dark-transp w-75">
         @csrf
         @method('PUT')
@@ -97,7 +105,7 @@
     </form>
 
     <div class="bg-secondary d-flex justify-content-evenly pb-2 w-75">
-        <form action="{{ route('activities.publish', $activity->id) }}" method="post">
+        <form action="{{ route('google.publish', $activity->id) }}" method="post">
             @csrf
             <button type="submit" class="btn btn-success fw-bold">Publish in Google Calendar!</button>
         </form>

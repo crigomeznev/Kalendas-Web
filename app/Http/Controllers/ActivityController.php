@@ -13,6 +13,8 @@ use Illuminate\Support\MessageBag;
 use Spatie\GoogleCalendar\Event;
 use Carbon\Carbon;
 
+use Google_Service_Calendar;
+
 class ActivityController extends Controller
 {
     /**
@@ -180,21 +182,5 @@ class ActivityController extends Controller
 
 
 
-    public function publish(Request $request, Activity $activity)    
-    {
 
-        echo "publishing";
-        $event = new Event;
-        
-        echo "uploading activity to google calendar event";
-        
-        $event->name = $activity->title;
-        $event->startDate = Carbon::now();
-        $event->endDate = Carbon::now()->addHour();
-        $event->save();
-
-        echo "event saved";
-
-        var_dump($event);
-    }
 }
