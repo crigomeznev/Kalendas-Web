@@ -10,7 +10,9 @@ use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\TargetController;
 use Illuminate\Support\Facades\Route;
 
-// use Spatie\GoogleCalendar\Event;
+
+
+use Spatie\GoogleCalendar\Event;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -73,3 +75,8 @@ Route::post('/calendars/switch', [CalendarController::class, 'switch'])
 Route::post('/calendars/date', [CalendarController::class, 'date'])
     ->name('calendars.date');
     
+
+Route::get('/google', function(){
+    $events = Event::get();
+    var_dump($events);
+});
