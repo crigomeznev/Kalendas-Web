@@ -41,7 +41,9 @@ class VerifyEmail extends Mailable
             'url' => $url
         );
         return $this->from(env('MAIL_USERNAME'), 'Example')
-            ->view('email.verify', $data);
+            ->view('email.verify', $data)
+            ->with(['message' => $this])
+            ->subject('Validate your Kalendas account');
         // return $this->view('view.name');
     }
 }
