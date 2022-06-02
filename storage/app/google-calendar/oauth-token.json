@@ -1,8 +1,0 @@
-{
-    "access_token": "ya29.a0ARrdaM-YE_Bx9NKm3lJzLMB655CzGCuzLDgjeLl6DVUW5whPizdpz5ei66Aly54LNfsXEcsle9Y37HXLBh-T0TEhwlfZ2L6sk-ZTMAKhjMqQpSmMxs_JR9dD880NavQtO6-To04HYPhEbFz6pUJydIczBQFo",
-    "expires_in": 3599,
-    "refresh_token": "1\/\/03CNHHQSyncHdCgYIARAAGAMSNwF-L9IrXpZWjmIgLHoy4KsUYG2zqrXPyVu7KzVrTzfd14BS6nUVJNfLrGolhVHteSY3PBEwIp8",
-    "scope": "https:\/\/www.googleapis.com\/auth\/calendar",
-    "token_type": "Bearer",
-    "created": 1653680735
-}

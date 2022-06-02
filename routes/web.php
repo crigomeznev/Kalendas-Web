@@ -76,7 +76,7 @@ Route::post('/calendars/date', [CalendarController::class, 'date'])
     ->name('calendars.date');
     
 
-Route::get('/google', function(){
+Route::get('/googleservice', function(){
     $event = new Event;
 
     $event->name = 'A new event';
@@ -89,3 +89,6 @@ Route::get('/google', function(){
     $events = Event::get();
     var_dump($events);
 });
+
+
+Route::get('/google', [GoogleCalendarController::class, 'getToken');
