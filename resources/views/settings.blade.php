@@ -18,12 +18,12 @@
         </div>
     @endif
     
-    <section class="row">
-        <h2 class="text-center">Global settings</h2>
+    <section class="row d-flex justify-content-center">
+        <h2 class="text-center m-3">Global settings</h2>
 
-        <div class="col">
-            <h2>Your calendars</h2>
-            <ul class="list-group">
+        <div class="col-md w-75 m-3">
+            <h2 class="text-center">Your calendars</h2>
+            <ul class="list-group text-center mt-4">
                 @foreach ($user->calendars as $calendar)
                     <li><a class="list-group-item list-group-item-action"
                             href="{{ route('calendars.show', $calendar->id) }}">{{ $calendar->title }}</a></li>
@@ -39,22 +39,22 @@
             </form>
         </div>
 
-        <div class="col">
-            <h2>Subscribed calendars</h2>
-            <ul class="list-group">
+        <div class="col-md w-75 m-3">
+            <h2 class="text-center">Subscribed calendars</h2>
+            <ul class="list-group text-center mt-4">
                 @foreach ($user->helps as $help)
-                    <li><a class="list-group-item list-group-item-action"
+                    <li><a class="list-group-item list-group-item-action text-center"
                         href="{{ route('calendars.show', $help->calendar->id) }}">{{ $help->user->name }}'s {{ $help->calendar->title }}</a>
                     </li>
                 @endforeach
             </ul>
         </div>
 
-        <div class="col">
-            <h2>Categories</h2>
-            <ul class="list-group">
+        <div class="col-md w-75 m-3">
+            <h2 class="text-center">Categories</h2>
+            <ul class="list-group text-center mt-4">
                 @foreach ($categories as $category)
-                    <li class="list-group-item list-group-action d-flex justify-content-between">
+                    <li class="list-group-item list-group-action d-flex justify-content-between text-center">
                             <p>{{ $category->name }}</p>
                             <form action="{{ route('categories.destroy', $category->id) }}" method="post">
                                 @csrf
@@ -74,16 +74,17 @@
                 </table>
         </div>
 
-        <div class="row">
-        <fieldset class="col">
-            <legend>Google Calendar</legend>
-            <a href="{{route('google.redirect')}}" class="btn btn-info bg-gradient">Connect your kalendas account with Google Calendar!</a>
-        </fieldset>
-        <form method="post" action="{{route('activities.report')}}" class="col">
-            @csrf
-            <legend>Jasper Report</legend>
-            <button type="submit" class="btn btn-info bg-gradient">View your activities report!</button>
-        </form>
+        <div class="row d-flex justify-content-between">
+            <fieldset class="col-md w-75 m-3">
+                <legend>Google Calendar</legend>
+                <a href="{{route('google.redirect')}}" class="btn btn-info bg-gradient">Connect your kalendas account with Google Calendar!</a>
+            </fieldset>
+            <div class="col"></div>
+            <form method="post" action="{{route('activities.report')}}" class="col-md w-75 m-3">
+                @csrf
+                <legend>Jasper Report</legend>
+                <button type="submit" class="btn btn-info bg-gradient">View your activities report!</button>
+            </form>
         </div>
     </section>
 

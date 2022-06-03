@@ -48,8 +48,8 @@ class ActivityController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'begins_at' => 'required|date',
-            'ends_at' => 'nullable|date',
+            // 'begins_at' => 'required|date',
+            // 'ends_at' => 'nullable|date',
             'title' => 'required|min:2'
         ]);
         
@@ -60,14 +60,14 @@ class ActivityController extends Controller
         }
 
         // Check end date after begin date, or null
-        $validDates = is_null($request->input('ends_at')) || new DateTime($request->input('begins_at')) < new DateTime($request->input('begins_at'));
-        if (!$validDates){
-            $errors = new MessageBag();
-            $errors->add('Invalid dates', 'Begin date must be earlier than end date');
-            return redirect(route('activities.create'))
-                ->withErrors($errors)
-                ->withInput();
-        }
+        // $validDates = is_null($request->input('ends_at')) || new DateTime($request->input('begins_at')) < new DateTime($request->input('begins_at'));
+        // if (!$validDates){
+        //     $errors = new MessageBag();
+        //     $errors->add('Invalid dates', 'Begin date must be earlier than end date');
+        //     return redirect(route('activities.create'))
+        //         ->withErrors($errors)
+        //         ->withInput();
+        // }
 
         Activity::create([
             'title' => $request->input('title'),

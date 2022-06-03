@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="kalendas">
 
 <head>
     <meta charset="UTF-8">
@@ -25,8 +25,9 @@
 </head>
 
 <body>
-    <section class="row d-flex align-content-center justify-content-evenly bg-img bg-overlay full-screen">
+    <section class="bg-img bg-overlay full-screen">
         <img src="{{ asset('img/login_bg.jpg') }}">
+    </section>
 
     @section('header')
     <header class="d-flex justify-content-between bg-light bg-gradient row">
@@ -42,7 +43,7 @@
     </header>
     @show
 
-    <main class="d-flex flex-column align-content-center justify-content-center center-content text-light">
+    <main class="text-light center-content w-100">
         @yield('content')
     </main>
 

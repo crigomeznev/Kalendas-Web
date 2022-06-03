@@ -19,7 +19,7 @@
         </div>
     @endif
 
-    <section class="row">
+    <section class="row m-3 d-flex flex-wrap justify-content-center">
         <div class="d-flex justify-content-between">
             <div>
                 <a href="{{ route('calendars.index') }}" class="btn btn-info"><i class="fa-solid fa-arrow-left-long"></i> Back to calendar</a>
@@ -30,7 +30,7 @@
         </div>
 
 
-        <div class="col-md">
+        <div class="col-md w-75 m-3">
             <h2>Helpers</h2>
             <table class="table table-striped">
                 <thead class="table table-dark">
@@ -82,7 +82,7 @@
             </table>
         </div>
 
-        <div class="col-md">
+        <div class="col-md w-75 m-3">
             <h2>Targets</h2>
             <table class="table">
                 <thead class="table table-dark">
@@ -135,7 +135,7 @@
                         <label for="target_file" class="form-label col-md text-center">Select .csv file</label>
                         <input class="form-control col-md w-75" type="file" id="target_file" name="target_file">
                     </div>
-                    <div class="d-flex justify-content-center align-items-center mt-2">
+                    <div class="d-flex justify-content-center align-items-center m-3">
                         <button type="submit" class="btn btn-success">Upload targets from .csv</button>
                     </div>
                 </div>

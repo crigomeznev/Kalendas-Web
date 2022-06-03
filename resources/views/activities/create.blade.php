@@ -11,12 +11,13 @@
 @endsection
 
 @section('content')
-    <div class="d-flex justify-content-between">
+<section class="d-flex flex-column justify-content-center align-items-center w-100">
+    <div class="d-flex justify-content-between m-2">
         <div>
-            <a href="{{ route('calendars.index') }}" class="btn btn-info"><i class="fa-solid fa-arrow-left-long"></i> Back to calendar</a>
+            <a href="{{ route('calendars.index') }}" class="btn btn-info m-2"><i class="fa-solid fa-arrow-left-long"></i> Back to calendar</a>
         </div>
 
-        <h1>New activity</h1>
+        <h1 class="m-2">New activity</h1>
 
         <div></div>
     </div>
@@ -36,8 +37,8 @@
             </label>
 
             <label for="category_id" class="row m-2">
-                <h6 class="col-3">Category</h6>
-                <div class="col d-flex">
+                <h6 class="col-md-3">Category</h6>
+                <div class="col-md d-flex">
                     <input type="hidden" name="_category_id" value="{{ old('category_id') }}">
                     <select name="category_id" id="category_id" class="form-select">
                         <option value="{{null}}"></option>
@@ -50,15 +51,15 @@
             </label>
 
             <label for="begins_at" class="row m-2">
-                <h6 class="col-3">Begins at</h6>
-                <div class="col d-flex">
+                <h6 class="col-md-3">Begins at</h6>
+                <div class="col-md d-flex">
                     <input type="datetime-local" name="begins_at" id="begins_at" value="{{old('begins_at')}}" class="form-control">
                 </div>
             </label>
 
             <label for="ends_at" class="row m-2">
-                <h6 class="col-3">Ends at</h6>
-                <div class="col d-flex">
+                <h6 class="col-md-3">Ends at</h6>
+                <div class="col-md d-flex">
                     <input type="datetime-local" name="ends_at" id="ends_at" value="{{old('ends_at')}}" class="form-control">
                 </div>
             </label>
@@ -73,11 +74,11 @@
             <hr>
             <legend>Location</legend>
             <div class="row">
-                <label for="latitude" class="col">
+                <label for="latitude" class="col-md">
                     <h6>Latitude</h6>
                     <input type="number" name="latitude" id="latitude" value="{{ old('latitude') }}" step="0.00000001" class="form-control">
                 </label>
-                <label for="longitude" class="col">
+                <label for="longitude" class="col-md">
                     <h6>Latitude</h6>
                     <input type="number" name="longitude" id="longitude" value="{{ old('longitude') }}"
                         step="0.00000001" class="form-control">
@@ -92,7 +93,7 @@
             </button>
         </div>
     </form>
-
+</section>
 @endsection
 
 @section('footer')

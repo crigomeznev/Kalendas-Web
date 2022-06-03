@@ -23,10 +23,10 @@
     @endif
 
     <section class="row">
-        <div class="row d-flex">
-            <h2 class="display-4 col">{{ $calendar->title }}</h2>
+        <div class="row d-flex justify-content-between mt-4">
+            <h2 class="display-4 col text-center">{{ $calendar->title }}</h2>
 
-            <div class="d-flex col">
+            <div class="d-flex justify-content-center col">
                 <label for="switchCalendar">
                     <p class="text-center">Switch calendar</p>
                     <input type="hidden" name="_curcalendar" value="{{ $calendar->id }}">
@@ -58,14 +58,14 @@
 
         </div>
 
-        <div class="col m-4 d-flex flex-column align-items-center">
+        <div class="col-md w-75 m-4 d-flex flex-column align-items-center justify-content-center">
             <div id="calendar-wrapper" class="calendar-wrapper text-dark w-100"></div>
             @if (isset($selectedDate))
                 <button type="button" id="unselectDate" class="btn btn-primary btn-gradient m-2">Clear date filter</button>
             @endif
         </div>
 
-        <div class="col m-4">
+        <div class="col-md w-75 m-4 justify-content-center">
             <input type="hidden" name="_selectedDate" value="{{ isset($selectedDate) ? $selectedDate : null }}">
 
             <h2>

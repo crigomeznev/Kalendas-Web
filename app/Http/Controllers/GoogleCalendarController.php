@@ -143,20 +143,20 @@ class GoogleCalendarController extends Controller
             $begins_at = date_create($activity->begins_at);
             $ends_at = date_create($activity->ends_at);
             $event = new Google_Service_Calendar_Event(array(
-                // 'summary' => 'asdfasd',
-                // 'location' => 'Av. Emili Vallès, 4, 08700 Igualada, Barcelona',
-                // 'description' => $activity->description,
-                // 'start' => array(
-                // 'dateTime' => date_format($begins_at,"Y-m-d") . "T" .date_format($begins_at,"H:i:sP"),
-                // 'timeZone' => 'Europe/Madrid',
-                // ),
-                // 'end' => array(
-                //     'dateTime' => date_format($ends_at,"Y-m-d") . "T" .date_format($ends_at,"H:i:sP"),
-                //     'timeZone' => 'Europe/Madrid',
-                // ),
-                // 'recurrence' => array(
-                // 'RRULE:FREQ=DAILY;COUNT=2'
-                // ),
+                'summary' => 'asdfasd',
+                'location' => 'Av. Emili Vallès, 4, 08700 Igualada, Barcelona',
+                'description' => $activity->description,
+                'start' => array(
+                'dateTime' => date_format($begins_at,"Y-m-d") . "T" .date_format($begins_at,"H:i:sP"),
+                'timeZone' => 'Europe/Madrid',
+                ),
+                'end' => array(
+                    'dateTime' => date_format($ends_at,"Y-m-d") . "T" .date_format($ends_at,"H:i:sP"),
+                    'timeZone' => 'Europe/Madrid',
+                ),
+                'recurrence' => array(
+                'RRULE:FREQ=DAILY;COUNT=2'
+                ),
             ));
         
             $calendarId = 'primary';

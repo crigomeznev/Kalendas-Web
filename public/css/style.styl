@@ -1,3 +1,4 @@
+#kalendas{
 $browntransp = rgba(138, 77, 28, 0.5);
 $greytransp = rgba(88, 88, 88, 0.5);
 $darktransp = rgba(0, 0, 0, 0.5);
@@ -13,16 +14,16 @@ $primary-bg=saddlebrown
 }
 
 body{
-    position:relative;
     box-sizing: border-box
 
-    overflow:hidden;
-
-    z-index: 1;
+    z-index: 5;
     margin: 0px;
-    height: 100vh
+    height: 100vh;
     min-height: 100%;
-    width: 100vw;
+    width: 100%;
+
+    display:flex;
+    flex-direction:column;
 
     @font-face {
         font-family: weiss;
@@ -38,19 +39,32 @@ body{
     background-color:blanchedAlmond;
 
     main{
-        height: 85%;
         overflow:auto;
+        max-height:90%;
     }
 
     footer{
-        height: 5%;
+        margin-top:auto;
+        padding:10px;
+    }
+
+
+    input, button, td, .badge, th, a{
+        padding:5px;
     }
 
     .bg-img{
-        position:relative;
+        //position:relative;
+        position:absolute;
+        top:0px;
+        left:0px;
         margin:0px;
         padding:0px;
         overflow:hidden;
+
+        height:100%;
+        width:100%;
+        z-index:-10;
 
         > img{
             position:absolute;
@@ -58,7 +72,7 @@ body{
             left:0px;
             width:100%;
             height:100%;
-            z-index: -10;
+            z-index: -15;
             object-fit:cover;
         }
     }
@@ -144,4 +158,5 @@ body{
 
 
 
+}
 }

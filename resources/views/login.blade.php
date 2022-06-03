@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="kalendas">
 
 <head>
     <meta charset="UTF-8">
@@ -7,9 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Kalendas - Login</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
 
     <script src="{{ asset('js/formUtils.js') }}"></script>
@@ -17,8 +20,16 @@
 </head>
 
 <body>
-    <section class="row d-flex align-content-center justify-content-evenly bg-img bg-overlay full-screen">
-        <img src="{{ asset('img/login_bg.jpg') }}">
+    
+    <!-- <section class="row d-flex align-content-center justify-content-evenly"> -->
+        <!-- <section class="text-light center-content full-screen row d-flex align-items-center justify-content-center full-screen"> -->
+            <section class="row d-flex justify-content-around align-items-center w-100 h-100">
+        <section class="bg-img bg-overlay full-screen">
+            <img src="{{ asset('img/login_bg.jpg') }}">
+        </section>
+        <!-- <div class="bg-img bg-overlay full-screen">
+            <img src="{{ asset('img/login_bg.jpg') }}">
+        </div> -->
         <div class="col-md d-flex justify-content-center align-items-center">
             <img src="{{ asset('img/logo.png') }}" width="600px">
         </div>

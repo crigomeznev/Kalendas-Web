@@ -11,13 +11,13 @@
 @endsection
 
 @section('content')
-    <div class="d-flex justify-content-between">
-        <div>
+    <div class="d-flex justify-content-between mt-4">
+        <div class="m-4">
             <a href="{{ route('calendars.index') }}" class="btn btn-info"><i class="fa-solid fa-arrow-left-long"></i> Back to calendar</a>
         </div>
 
         <h1>Edit activity</h1>
-        <form action="{{ route('activities.destroy', $activity->id) }}" method="post">
+        <form action="{{ route('activities.destroy', $activity->id) }}" method="post" class="m-4">
             @csrf
             @method('DELETE')
             <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i> Delete activity</button>
@@ -34,7 +34,7 @@
             </ul>
         </div>
     @endif    
-    <form action="{{ route('activities.update', $activity->id) }}" method="post" class="bg-dark-transp w-75">
+    <form action="{{ route('activities.update', $activity->id) }}" method="post" class="bg-dark-transp">
         @csrf
         @method('PUT')
         <fieldset class="p-4">
@@ -104,7 +104,7 @@
         </div>
     </form>
 
-    <div class="bg-secondary d-flex justify-content-evenly pb-2 w-75">
+    <div class="bg-secondary d-flex justify-content-evenly pb-2">
         <form action="{{ route('google.publish', $activity->id) }}" method="post">
             @csrf
             <button type="submit" class="btn btn-success fw-bold">Publish in Google Calendar!</button>
