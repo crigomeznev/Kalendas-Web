@@ -15,6 +15,9 @@ use Carbon\Carbon;
 
 use Google_Service_Calendar;
 
+use Jaspersoft\Client\Client;
+
+
 class ActivityController extends Controller
 {
     /**
@@ -180,7 +183,38 @@ class ActivityController extends Controller
 
 
 
+    public function report(Request $request)
+    {
+        $c = new Client(
+            "http://51.68.224.27:8080/jasperserver",
+            "daw2-cgomez",
+            "3232G",
+            ""
+        );		
 
+
+// $input_controls = $c->reportService()->getReportInputControls('/daw2-cgomez/activities');
+
+// foreach($input_controls as $ic) {
+// printf('Key: %s <br />', $ic->id);
+// foreach ($ic->options as $ico) {
+//     printf('    -- Value: %s <br />', $ico['label']);
+// }
+// }		
+
+
+
+
+$controls = array(
+	'email' => ['cgomezpruebas@gmail.com'],
+	'category' => [null],
+	);
+$report = $c->reportService()->runReport('/daw2-cgomez/activities', 'html', null, null, $controls);
+
+echo $report;	
+exit();
+// return redirect
+    }
 
 
 }

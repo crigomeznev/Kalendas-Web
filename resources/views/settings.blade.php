@@ -74,10 +74,17 @@
                 </table>
         </div>
 
-        <fieldset>
+        <div class="row">
+        <fieldset class="col">
             <legend>Google Calendar</legend>
             <a href="{{route('google.redirect')}}" class="btn btn-info bg-gradient">Connect your kalendas account with Google Calendar!</a>
         </fieldset>
+        <form method="post" action="{{route('activities.report')}}" class="col">
+            @csrf
+            <legend>Jasper Report</legend>
+            <button type="submit" class="btn btn-info bg-gradient">View your activities report!</button>
+        </form>
+        </div>
     </section>
 
 @endsection

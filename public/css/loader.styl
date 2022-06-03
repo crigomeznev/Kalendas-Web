@@ -1,12 +1,33 @@
-body{
-    background-color:black;
+// Loader
+.loader{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    z-index:10;
+    background-color:rgba(0,0,0,0.5);
+
+    opacity:1;
+    transition: opacity 1s linear;
+
+//    transform:translate(-50%,-50%);
+}
+
+.loader-hide{
+    opacity:0;
 }
 
 .clock{
-    position:relative;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+
     // background-color: antiquewhite;
-    border:2px solid lavender;
+    border:3px solid antiqueWhite;
     border-radius: 50%;
+    background-color: black;
     width: 100px;
     height: 100px;
 }

@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/loader.css') }}">
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
     
+    <script src="{{ asset('js/loader.js') }}"></script>
     <script src="{{ asset('js/formUtils.js') }}"></script>
     
     @section('head')
@@ -25,16 +26,15 @@
 
 <body>
     <section class="row d-flex align-content-center justify-content-evenly bg-img bg-overlay full-screen">
-    <img src="{{ asset('img/login_bg.jpg') }}">
+        <img src="{{ asset('img/login_bg.jpg') }}">
 
     @section('header')
-    <header class="d-flex justify-content-between bg-light bg-gradient">
-        {{-- <h1 class="col title-font">Kalendas</h1> --}}
-        <div>
+    <header class="d-flex justify-content-between bg-light bg-gradient row">
+        <div class="col-md">
             <img src="{{ asset('img/logo.png') }}" width="300px">
         </div>
     
-        <form action="{{route('logout')}}" method="post" class="d-flex align-items-center">
+        <form action="{{route('logout')}}" method="post" class="d-flex justify-content-center align-items-center col-md">
             @csrf
             <a href="{{ route('settings') }}" class="btn btn-warning m-4">Settings</a>
             <button type="submit" class="btn btn-danger m-4">Log out</button>
@@ -52,12 +52,12 @@
     </footer>
     @show
 
-    <div class="loader">
+    <div class="loader" id="loader">
         <div class="clock">
             <div class="minute-hand"></div>
             <div class="hour-hand"></div>
             <div class="round"></div>
         </div>
     </div>
-
+    </section>
 </body>

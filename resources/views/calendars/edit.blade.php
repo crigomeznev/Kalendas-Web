@@ -30,7 +30,7 @@
         </div>
 
 
-        <div class="col">
+        <div class="col-md">
             <h2>Helpers</h2>
             <table class="table table-striped">
                 <thead class="table table-dark">
@@ -82,7 +82,7 @@
             </table>
         </div>
 
-        <div class="col">
+        <div class="col-md">
             <h2>Targets</h2>
             <table class="table">
                 <thead class="table table-dark">
@@ -130,18 +130,19 @@
 
             <form action="{{ route('targets.upload') }}" method="post" enctype="multipart/form-data">
                 @csrf
-                <div class="mb-3 d-flex">
-                    <div>
-                        <label for="target_file" class="form-label">Select .csv file</label>
-                        <input class="form-control" type="file" id="target_file" name="target_file">
+                <div class="mb-3">
+                    <div class="d-flex justify-content-center align-items-center row">
+                        <label for="target_file" class="form-label col-md text-center">Select .csv file</label>
+                        <input class="form-control col-md w-75" type="file" id="target_file" name="target_file">
                     </div>
-                    <button type="submit" class="btn btn-success">Upload targets from .csv</button>
+                    <div class="d-flex justify-content-center align-items-center mt-2">
+                        <button type="submit" class="btn btn-success">Upload targets from .csv</button>
+                    </div>
                 </div>
             </form>
         </div>
     </section>
 
-    <a href="{{ route('calendars.index') }}" class="btn btn-warning">Back to calendar</a>
 @endsection
 
 

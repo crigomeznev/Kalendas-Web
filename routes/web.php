@@ -98,3 +98,9 @@ Route::post('activities/{activity}/publish', [GoogleCalendarController::class, '
 Route::get('/auth/redirect', [GoogleCalendarController::class, 'redirect'])
     ->name('google.redirect');
 Route::get('/auth/callback', [GoogleCalendarController::class, 'callback']);
+
+
+
+// Jasper
+Route::post('activities/report', [ActivityController::class, 'report'])
+    ->name('activities.report');

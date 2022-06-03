@@ -1,10 +1,25 @@
-body {
-  background-color: #000;
+.loader {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+.loader-hide {
+  opacity: 0;
 }
 .clock {
-  position: relative;
-  border: 2px solid #e6e6fa;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid antiqueWhite;
   border-radius: 50%;
+  background-color: #000;
   width: 100px;
   height: 100px;
 }
