@@ -8,6 +8,7 @@
         "php": "^8.0.2",
         "google/apiclient": "^2.2",
         "guzzlehttp/guzzle": "^7.2",
+        "jaspersoft/rest-client": "v2.0",
         "laravel/framework": "^9.11",
         "laravel/sanctum": "^2.15",
         "laravel/socialite": "^5.5",

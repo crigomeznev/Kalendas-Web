@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '8beca808839e35a4ef23b893b262f64e1fa27963',
+        'reference' => '361538b5cef15cda00b7930ac578cff1c386baad',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -394,6 +394,15 @@
                 0 => 'v9.14.1',
             ),
         ),
+        'jaspersoft/rest-client' => array(
+            'pretty_version' => 'v2.0.0',
+            'version' => '2.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../jaspersoft/rest-client',
+            'aliases' => array(),
+            'reference' => '017f081101b8f8c1a7ba15b65a89694d8c53bd2c',
+            'dev_requirement' => false,
+        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -415,7 +424,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '8beca808839e35a4ef23b893b262f64e1fa27963',
+            'reference' => '361538b5cef15cda00b7930ac578cff1c386baad',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
