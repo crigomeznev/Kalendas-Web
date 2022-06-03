@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/loader.css') }}">
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
     
     <script src="{{ asset('js/formUtils.js') }}"></script>
@@ -50,5 +51,13 @@
         Copyright Kalendas 2021-22 All rights reserved
     </footer>
     @show
+
+    <div class="loader">
+        <div class="clock">
+            <div class="minute-hand"></div>
+            <div class="hour-hand"></div>
+            <div class="round"></div>
+        </div>
+    </div>
 
 </body>

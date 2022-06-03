@@ -13,6 +13,7 @@ $primary-bg=saddlebrown
 }
 
 body{
+    position:relative;
     box-sizing: border-box
 
     z-index: 1;
@@ -131,6 +132,17 @@ body{
 
     li{
         list-style-type: none
+    }
+
+
+
+    // Loader
+    .loader{
+        position:absolute;
+        top:50%;
+        left:50%;
+        z-index:10;
+        transform:translate(-50%,-50%);
     }
 
 }

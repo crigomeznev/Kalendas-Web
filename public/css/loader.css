@@ -1,0 +1,116 @@
+body {
+  background-color: #000;
+}
+.clock {
+  position: relative;
+  border: 2px solid #e6e6fa;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.hour-hand {
+  width: 25%;
+  height: 3px;
+  background-color: #8b4513;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0% 50%;
+  animation-name: hour-spin;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-timing-function: linear;
+}
+.minute-hand {
+  width: 40%;
+  height: 2px;
+  background-color: #f00;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0% 50%;
+  animation-name: hour-spin;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(60);
+}
+.round {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background-color: #e6e6fa;
+  width: 7px;
+  height: 7px;
+  transform: translate(-50%, -50%);
+}
+@-moz-keyframes hour-spin {
+  0% {
+    transform: rotateZ(-90deg);
+  }
+  25% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+  75% {
+    transform: rotateZ(270deg);
+  }
+  100% {
+    transform: rotateZ(-90deg);
+  }
+}
+@-webkit-keyframes hour-spin {
+  0% {
+    transform: rotateZ(-90deg);
+  }
+  25% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+  75% {
+    transform: rotateZ(270deg);
+  }
+  100% {
+    transform: rotateZ(-90deg);
+  }
+}
+@-o-keyframes hour-spin {
+  0% {
+    transform: rotateZ(-90deg);
+  }
+  25% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+  75% {
+    transform: rotateZ(270deg);
+  }
+  100% {
+    transform: rotateZ(-90deg);
+  }
+}
+@keyframes hour-spin {
+  0% {
+    transform: rotateZ(-90deg);
+  }
+  25% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+  75% {
+    transform: rotateZ(270deg);
+  }
+  100% {
+    transform: rotateZ(-90deg);
+  }
+}

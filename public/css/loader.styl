@@ -1,0 +1,85 @@
+body{
+    background-color:black;
+}
+
+.clock{
+    position:relative;
+    // background-color: antiquewhite;
+    border:2px solid lavender;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+@keyframes hour-spin {
+    0% {
+        transform: rotateZ(-90deg);
+    }
+
+    25% {
+        transform: rotateZ(0deg);
+    }
+
+    50%{
+        transform: rotateZ(180deg);
+    }
+
+    75%{
+        transform: rotateZ(270deg);
+    }
+
+    100% {
+        transform: rotateZ(-90deg);
+    }
+}
+
+.hour-hand{
+    width: 25%;
+    height: 3px;
+    background-color: saddlebrown;
+
+    position:absolute;
+    top:50%;
+    left:50%;
+
+    transform-origin: 0% 50%;
+    // transform: rotateZ(-90deg);
+
+    animation-name: hour-spin;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;    
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-timing-function: linear;
+}
+
+
+.minute-hand{
+    width: 40%;
+    height: 2px;
+    background-color: red;
+
+    position:absolute;
+    top:50%;
+    left:50%;
+
+    transform-origin: 0% 50%;
+    // transform: rotateZ(-90deg);
+
+    animation-name: hour-spin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;    
+    animation-timing-function: steps(60);
+}
+
+
+.round{
+    position: absolute;
+    top:50%;
+    left:50%;
+    border-radius: 50%;
+    background-color: lavender;
+    width: 7px;
+    height: 7px;
+    transform:translate(-50%,-50%);
+}
